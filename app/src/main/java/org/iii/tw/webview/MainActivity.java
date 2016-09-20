@@ -11,6 +11,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+            //第一版
+//        webView = new WebView(this);
+//        webView.loadUrl("http://www.iii.org.tw");
+//        setContentView(webView);
+
         setContentView(R.layout.activity_main);
 
         mesg = (TextView) findViewById(R.id.mesg);
@@ -18,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         initWebVuew();
     }
     private void initWebVuew(){
-
+        //第二版
+//        webView.loadUrl("http://www.iii.org.tw");
+        //第三版
+        webView.loadUrl("file:///android_asset/brad.html");
     }
 }
