@@ -3,13 +3,16 @@ package org.iii.tw.webview;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mesg;
     private WebView webView;
+    private EditText inputName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,26 +25,33 @@ public class MainActivity extends AppCompatActivity {
 
         mesg = (TextView) findViewById(R.id.mesg);
         webView = (WebView) findViewById(R.id.webview);
-        initWebVuew();
+        inputName = (EditText)findViewById(R.id.inputName);
+        initWebView();
     }
-    private void initWebVuew(){
+    private void initWebView(){
         //第二版
         WebViewClient client = new WebViewClient();
         webView.setWebViewClient(client);
-        webView.loadUrl("http://www.iii.org.tw");
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+//        webView.loadUrl("http://www.iii.org.tw");
         //第三版
-//        webView.loadUrl("file:///android_asset/brad.html");
+        webView.loadUrl("file:///android_asset/brad.html");
         //第四版
 //        String data = "<h1>Brad Big Company</h1>";
 //        webView.loadData(data,"txt/html;charset=UTF-8",null);
     }
-    public void test1(View v){
-        doPrev();
+    public void b1task(View v){
+//        doPrev();
+        String name = inputName.getText().toString();
+        webView.loadUrl("javascript:test2('" + name +"')");
     }
-    public void test2(View v){
-        doNext();
+    public void b2task(View v){
+//        doNext();
+        int x = 3,  y = 4;
+        webView.loadUrl("javascript:test3(" + x + "," + y +")");
     }
-    public void test3(View v){
+    public void b3task(View v){
         doReload();
     }
     private void doPrev(){

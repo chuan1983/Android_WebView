@@ -13,24 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="test1"
-        android:onClick="test1"
+        android:text="b1task"
+        android:onClick="b1task"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="test2"
-        android:onClick="test2"
+        android:text="b2task"
+        android:onClick="b2task"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="test3"
-        android:onClick="test3"
+        android:text="b3task"
+        android:onClick="b3task"
         />
     </LinearLayout>
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
     <TextView
         android:id="@+id/mesg"
         android:layout_width="wrap_content"

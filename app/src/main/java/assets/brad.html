@@ -1,2 +1,22 @@
+<script>
+    function test1(){
+        var here = document.getElementById("here");
+        here.innerHTML = "Hello, Brad:" + parseInt(Math.random()*49+1);
+    }
+    function test2(name){
+        var here = document.getElementById("here2");
+        here.innerHTML = "Hello, " + name;
+    }
+    function test3(x, y){
+        var here = document.getElementById("here2");
+        var result = x / y;
+        here.innerHTML = x + " / " + y + " = " + result;
+    }
+</script>
 <h1>Brad Big Company</h1>
-<hr>Hello Word
+<hr/>
+Hello Word
+<input type="button" value="click me" onclick="test1()"/>
+<input type="button" value="for test3" onclick="test3(3,4)" />
+<div id="here"></div>
+<div id="here2"></div>
