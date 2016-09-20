@@ -1,6 +1,7 @@
 package org.iii.tw.webview;
 
 import android.content.Intent;
+import android.location.LocationManager;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         handler = new UIHandler();
-
 
         mesg = (TextView) findViewById(R.id.mesg);
         webview = (WebView) findViewById(R.id.webview);
