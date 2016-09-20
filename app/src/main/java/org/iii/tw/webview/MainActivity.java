@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         WebViewClient client = new WebViewClient();
         webView.setWebViewClient(client);
         WebSettings settings = webView.getSettings();
-        settings.setJavaScriptEnabled(true);
+        settings.setJavaScriptEnabled(true);           //打開功能
 //        webView.loadUrl("http://www.iii.org.tw");
         //第三版
         webView.loadUrl("file:///android_asset/brad.html");
