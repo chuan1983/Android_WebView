@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         //第二版
 //        webView.loadUrl("http://www.iii.org.tw");
         //第三版
-        webView.loadUrl("file:///android_asset/brad.html");
+//        webView.loadUrl("file:///android_asset/brad.html");
+        //第四版
+//        String data = "<h1>Brad Big Company</h1>";
+//        webView.loadData(data,"txt/html;charset=UTF-8",null);
     }
 }
